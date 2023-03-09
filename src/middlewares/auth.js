@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const SECERET_KEY = "NOTESAPI";
+const SECERET_KEY = "##$%Afod";
 
 const auth = (req, res, next)=>{
     try {
