@@ -5,6 +5,7 @@ const userRouter = require("./routes/userRoutes");
 const dotenv = require("dotenv").config();
 const mongoose = require("mongoose");
 const cors = require("cors");
+mongoose.set("strictQuery", true);
 
 app.use(express.json());
 
@@ -12,6 +13,10 @@ app.use(cors());
 
 app.use("/users", userRouter);
 app.use("/notes", notesRouter);
+app.get("/",(req,res)=>{
+    res.send("welcome to notesApi by Danger..");
+});
+
 
 const PORT = process.env.PORT || 5000;
 
